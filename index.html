@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -106,6 +107,14 @@
             // Libere o objeto URL após o download.
             window.URL.revokeObjectURL(url);
         }
+        
+    // Função para recarregar a página
+    function reloadPage() {
+        location.reload();
+    }
+    
+    // Atualize o evento de clique do botão de cancelar
+    document.getElementById("cancel-btn").addEventListener("click", reloadPage);
 
         // Adicione um evento de alteração ao botão de arquivo para exibir os nomes dos arquivos selecionados
         var fileInput = document.querySelector('input[type="file"]');
